@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PRN222\\Exercise5_ProductStore\\Exercise5_ProductStore\\ProductManagementASPNETCoreMVC\\ProductManagementMVC\\ProductManagementMVC.csproj": {}
+    "D:\\ProductManagement-MVC\\ProductManagementASPNETCoreMVC\\ProductManagementMVC\\ProductManagementMVC.csproj": {}
   },
   "projects": {
-    "D:\\PRN222\\Exercise5_ProductStore\\Exercise5_ProductStore\\ProductManagementASPNETCoreMVC\\ProductManagementMVC\\ProductManagementMVC.csproj": {
+    "D:\\ProductManagement-MVC\\ProductManagementASPNETCoreMVC\\ProductManagementMVC\\ProductManagementMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN222\\Exercise5_ProductStore\\Exercise5_ProductStore\\ProductManagementASPNETCoreMVC\\ProductManagementMVC\\ProductManagementMVC.csproj",
+        "projectUniqueName": "D:\\ProductManagement-MVC\\ProductManagementASPNETCoreMVC\\ProductManagementMVC\\ProductManagementMVC.csproj",
         "projectName": "ProductManagementMVC",
-        "projectPath": "D:\\PRN222\\Exercise5_ProductStore\\Exercise5_ProductStore\\ProductManagementASPNETCoreMVC\\ProductManagementMVC\\ProductManagementMVC.csproj",
+        "projectPath": "D:\\ProductManagement-MVC\\ProductManagementASPNETCoreMVC\\ProductManagementMVC\\ProductManagementMVC.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN222\\Exercise5_ProductStore\\Exercise5_ProductStore\\ProductManagementASPNETCoreMVC\\ProductManagementMVC\\obj\\",
+        "outputPath": "D:\\ProductManagement-MVC\\ProductManagementASPNETCoreMVC\\ProductManagementMVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\PRN222\\Exercise5_ProductStore\\Exercise5_ProductStore\\ProductManagementASPNETCoreMVC\\Services\\Services.csproj": {
-                "projectPath": "D:\\PRN222\\Exercise5_ProductStore\\Exercise5_ProductStore\\ProductManagementASPNETCoreMVC\\Services\\Services.csproj"
+              "D:\\ProductManagement-MVC\\ProductManagementASPNETCoreMVC\\Services\\Services.csproj": {
+                "projectPath": "D:\\ProductManagement-MVC\\ProductManagementASPNETCoreMVC\\Services\\Services.csproj"
               }
             }
           }
@@ -88,14 +88,14 @@
         }
       }
     },
-    "D:\\PRN222\\Exercise5_ProductStore\\Exercise5_ProductStore\\ProductManagementASPNETCoreMVC\\Repositories\\Repositories.csproj": {
+    "D:\\ProductManagement-MVC\\ProductManagementASPNETCoreMVC\\Repositories\\Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN222\\Exercise5_ProductStore\\Exercise5_ProductStore\\ProductManagementASPNETCoreMVC\\Repositories\\Repositories.csproj",
+        "projectUniqueName": "D:\\ProductManagement-MVC\\ProductManagementASPNETCoreMVC\\Repositories\\Repositories.csproj",
         "projectName": "Repositories",
-        "projectPath": "D:\\PRN222\\Exercise5_ProductStore\\Exercise5_ProductStore\\ProductManagementASPNETCoreMVC\\Repositories\\Repositories.csproj",
+        "projectPath": "D:\\ProductManagement-MVC\\ProductManagementASPNETCoreMVC\\Repositories\\Repositories.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN222\\Exercise5_ProductStore\\Exercise5_ProductStore\\ProductManagementASPNETCoreMVC\\Repositories\\obj\\",
+        "outputPath": "D:\\ProductManagement-MVC\\ProductManagementASPNETCoreMVC\\Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -179,14 +179,14 @@
         }
       }
     },
-    "D:\\PRN222\\Exercise5_ProductStore\\Exercise5_ProductStore\\ProductManagementASPNETCoreMVC\\Services\\Services.csproj": {
+    "D:\\ProductManagement-MVC\\ProductManagementASPNETCoreMVC\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN222\\Exercise5_ProductStore\\Exercise5_ProductStore\\ProductManagementASPNETCoreMVC\\Services\\Services.csproj",
+        "projectUniqueName": "D:\\ProductManagement-MVC\\ProductManagementASPNETCoreMVC\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "D:\\PRN222\\Exercise5_ProductStore\\Exercise5_ProductStore\\ProductManagementASPNETCoreMVC\\Services\\Services.csproj",
+        "projectPath": "D:\\ProductManagement-MVC\\ProductManagementASPNETCoreMVC\\Services\\Services.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN222\\Exercise5_ProductStore\\Exercise5_ProductStore\\ProductManagementASPNETCoreMVC\\Services\\obj\\",
+        "outputPath": "D:\\ProductManagement-MVC\\ProductManagementASPNETCoreMVC\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -207,8 +207,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\PRN222\\Exercise5_ProductStore\\Exercise5_ProductStore\\ProductManagementASPNETCoreMVC\\Repositories\\Repositories.csproj": {
-                "projectPath": "D:\\PRN222\\Exercise5_ProductStore\\Exercise5_ProductStore\\ProductManagementASPNETCoreMVC\\Repositories\\Repositories.csproj"
+              "D:\\ProductManagement-MVC\\ProductManagementASPNETCoreMVC\\Repositories\\Repositories.csproj": {
+                "projectPath": "D:\\ProductManagement-MVC\\ProductManagementASPNETCoreMVC\\Repositories\\Repositories.csproj"
               }
             }
           }
