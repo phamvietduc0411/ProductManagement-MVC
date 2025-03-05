@@ -1,3 +1,6 @@
+using Repositories;
+using System.Configuration;
+using Repositories.Infrastructures;
 using Services.Interfaces;
 using Services.Services;
 
@@ -12,6 +15,8 @@ namespace ProductManagementMVC
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            builder.Services.AddScoped<MyStoreContext>();
+            builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
             builder.Services.AddScoped<IProductService, ProductService>();
             builder.Services.AddScoped<ICategoryService, CategoryService>();
             builder.Services.AddScoped<IAccountService, AccountService>();

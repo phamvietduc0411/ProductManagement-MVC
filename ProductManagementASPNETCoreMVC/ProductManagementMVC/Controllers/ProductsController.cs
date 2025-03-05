@@ -30,18 +30,11 @@ namespace ProductManagementMVC.Controllers
 
 
         // GET: Products
-        //public async Task<IActionResult> Index()
-        //{
-        //    var myStoreContext = _contextProduct.GetProducts();
-        //    return View(myStoreContext.ToList());
-        //}
 
         public async Task<IActionResult> Index()
 
         {
-            //string userId = HttpContext.Session.GetString("UserId");
-            //string username = HttpContext.Session.GetString("Username");
-            if (HttpContext.Session.GetString("UserId") == null)
+            if (HttpContext.Session.GetString("UserEmail") == null)
             {
                 return RedirectToAction("Login", "Account");
             }
@@ -52,6 +45,10 @@ namespace ProductManagementMVC.Controllers
         // GET: Products/Details/5
         public async Task<IActionResult> Details(int? id)
         {
+            if (HttpContext.Session.GetString("UserEmail") == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
             if (id == null)
             {
                 return NotFound();
@@ -69,7 +66,11 @@ namespace ProductManagementMVC.Controllers
         // GET: Products/Create
         public IActionResult Create()
         {
-            ViewData["CategoryId"] = new SelectList(_contextCategory.GetCategories(), "CategoryId", "CategoryId");
+            if (HttpContext.Session.GetString("UserEmail") == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+            ViewData["CategoryId"] = new SelectList(_contextCategory.GetCategories(), "CategoryId", "CategoryName");
             return View();
         }
 
@@ -80,18 +81,26 @@ namespace ProductManagementMVC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ProductId,ProductName,CategoryId,UnitsInStock,UnitPrice")] Product product)
         {
+            if (HttpContext.Session.GetString("UserEmail") == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
             if (ModelState.IsValid)
             {
-                _contextProduct.SaveProduct(product);
+                await _contextProduct.SaveProduct(product);
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CategoryId"] = new SelectList(_contextCategory.GetCategories(), "CategoryId", "CategoryId", product.CategoryId);
+            ViewData["CategoryId"] = new SelectList(_contextCategory.GetCategories(), "CategoryId", "CategoryName", product.CategoryId);
             return View(product);
         }
 
         // GET: Products/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            if (HttpContext.Session.GetString("UserEmail") == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
             if (id == null)
             {
                 return NotFound();
@@ -102,7 +111,7 @@ namespace ProductManagementMVC.Controllers
             {
                 return NotFound();
             }
-            ViewData["CategoryId"] = new SelectList(_contextCategory.GetCategories(), "CategoryId", "CategoryId", product.CategoryId);
+            ViewData["CategoryId"] = new SelectList(_contextCategory.GetCategories(), "CategoryId", "CategoryName", product.CategoryId);
             return View(product);
         }
 
@@ -113,6 +122,10 @@ namespace ProductManagementMVC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("ProductId,ProductName,CategoryId,UnitsInStock,UnitPrice")] Product product)
         {
+            if (HttpContext.Session.GetString("UserEmail") == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
             if (id != product.ProductId)
             {
                 return NotFound();
@@ -122,7 +135,7 @@ namespace ProductManagementMVC.Controllers
             {
                 try
                 {
-                    _contextProduct.UpdateProduct(product);
+                    await _contextProduct.UpdateProduct(product);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -137,13 +150,17 @@ namespace ProductManagementMVC.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CategoryId"] = new SelectList(_contextCategory.GetCategories(), "CategoryId", "CategoryId", product.CategoryId);
+            ViewData["CategoryId"] = new SelectList(_contextCategory.GetCategories(), "CategoryId", "CategoryName", product.CategoryId);
             return View(product);
         }
 
         // GET: Products/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
+            if (HttpContext.Session.GetString("UserEmail") == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
             if (id == null)
             {
                 return NotFound();
@@ -163,10 +180,14 @@ namespace ProductManagementMVC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            if (HttpContext.Session.GetString("UserEmails") == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
             var product = _contextProduct.GetProductById((int)id);
             if (product != null)
             {
-                _contextProduct.DeleteProduct(product);
+                await _contextProduct.DeleteProduct(product);
             }
 
  
